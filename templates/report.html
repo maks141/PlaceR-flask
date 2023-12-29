@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Отчетность{% endblock %}
+
+{% block body %}
+<h1>Добавление отчета</h1>
+
+<div class="form-container">
+    <form method="post" class="work-form">
+        <select name="client_id" id="client_id" class="btn btn-secondary dropdown-toggle">
+            <option selected  disabled>Выберете имя клиента из списка</option>
+            {% for client in clients %}
+                <option value="{{ client.id }}">{{ client.name }}</option>
+            {% endfor %}
+        </select><br><br>   
+        
+        <div class="service-block-container" id="service-block-container">
+            <div class="service-block-input" id="service-add-block">
+                <input type="text" name="service" id="service" class="form-control" placeholder="Введите название услуги">
+                <input type="text" name="service_price" id="service_price" class="form-control" placeholder="Введите стоимость услуги">
+                <!-- <div class="service-add-block">
+                    <input type="button" value="Добавить" onclick="add_service_block()">
+                    <script defer>
+                        function add_service_block() {
+                            let o = document.getElementById("service-add-block");
+                            // document.getElementById("service-block-container").insertBefore(div, document.querySelector("#fake-div"));
+                            let div = document.createElement('div');
+                            div.innerHTML = o.outerHTML + "<br>";
+                            document.getElementById("service-block-container").appendChild(div);
+                        }
+                    </script>
+                </div>
+                <div class="service-remove-block">
+                    <input type="button" value="Удалить" onclick="remove_service_block()">
+                    <script defer>
+                        function remove_service_block() {
+                            let o = document.getElementById("service-add-block");
+                            // document.getElementById("service-block-container").insertBefore(div, document.querySelector("#fake-div"));
+                            o.remove();
+                        }
+                    </script>
+                </div> -->
+            </div>
+            <br>
+        </div>
+
+        <input type="text" name="date" id="date" class="form-control" placeholder="Введите дату когда была выполнена работа | Например: 12.03.2023"><br>
+        <input type="submit" class="btn btn-success" value="Добавить">
+    </form>
+</div>
+{% endblock %}

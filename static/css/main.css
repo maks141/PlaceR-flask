@@ -1,0 +1,162 @@
+/* Стилизация шаблона base.html */
+
+ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
+  padding-left: 0; /*убираем левый отступ, равный 40px*/
+}
+a {text-decoration: none; /*убираем подчеркивание текста ссылок*/}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background: #3333CC;
+    padding: 20px;
+}
+
+.menu-item{
+    padding-right: 50px;
+}
+
+.menu-item a {
+    font-size: 20px;
+    color: white;
+}
+
+/* Стилизация login.html */
+
+.login-container {
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+
+/* Стилизация addclient.html */
+
+.form-container {
+    width: 40%;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+/* Стилизация index.html */
+
+.index-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    /* border: rgb(177, 177, 177) 1px solid;    */
+}
+
+.addclient-list {
+    display: flex;
+}
+
+.addclient-list p {
+    padding-right: 50px;
+}
+
+.index-wrapper {
+    display: flex; 
+    margin-left: 300px;
+}
+
+.index-info-container {
+    display: flex;
+}
+
+.index-container {
+    flex-direction: column;
+}
+
+.index-info-column {
+    border: 1px solid black;
+}
+
+.index-info-row {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Стилизация страницы report.html */
+
+.work-form select{
+    width: 100%;
+}
+
+.service-block-input {
+    display: flex;
+}
+
+.service-add-block {
+    width: 250px;
+    background: gray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.service-add-block input {
+    width: 100%;
+    height: 100%;
+    color: white;
+    border: none;
+    background: gray;
+}
+
+.service-remove-block {
+    width: 100px;
+    background: #ca4444;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.service-remove-block input {
+    width: 100%;
+    height: 100%;
+    color: white;
+    border: none;
+    background: gray;
+}
+
+/* Стилизация страницы create_report_clients.html */
+
+.create-report-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.create-report-clients-btn {
+    margin: 0 auto;
+    height: 60px;
+}
+.create-report-clients-container {
+    display: flex;
+    margin-top: 30px;
+}
+
+.create-report-clients-column {
+    /* display: flex; */
+    border: 1px solid black;
+}
+
+.create-report-clients-row {
+    padding: 10px;
+    border: 1px solid black;
+}
+

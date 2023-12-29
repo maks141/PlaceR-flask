@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Отчетность{% endblock %}
+
+{% block body %}
+<h1>Формирование отчета</h1>
+
+<div class="create-report-container" id="create-report-container">
+    <form method="post">
+        <input type="submit" id="" name="" value="Сформировать полный отчет" class="btn btn-primary create-report-clients-btn">
+    </form>
+    <div class="create-report-clients-container">
+        <div class="create-report-clients-column">
+            <div class="create-report-clients-row">ID Записи</div>
+            {% for report in reports %}
+                <div class="create-report-clients-row">
+                    {{ report.id }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="create-report-clients-column">
+            <div class="create-report-clients-row">ID Клиента</div>
+            {% for report in reports %}
+                <div class="create-report-clients-row">
+                    {{ report.client_id}}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="create-report-clients-column">
+            <div class="create-report-clients-row">Услуга</div>
+            {% for report in reports %}
+                <div class="create-report-clients-row">
+                    {{ report.service}}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="create-report-clients-column">
+            <div class="create-report-clients-row">Стоимость</div>
+            {% for report in reports %}
+                <div class="create-report-clients-row">
+                    {{ report.service_price }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="create-report-clients-column">
+            <div class="create-report-clients-row">Дата</div>
+            {% for report in reports %}
+                <div class="create-report-clients-row">
+                    {{ report.date }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

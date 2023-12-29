@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block body %}
+    <h1>Главная страница</h1>
+
+    <div class="index-wrapper">
+        <div class="index-container">
+            <h4>Недавно добавленные клиенты</h2>
+                <div class="index-info-container">
+                    <div class="index-info-column">
+                        <div class="index-info-row">Имя клиента</div>
+                        <div class="index-info-row">{{ addclient[-1].name }}</div>
+                        <div class="index-info-row">{{ addclient[-2].name }}а</div>
+                        <div class="index-info-row">{{ addclient[-3].name }}</div>
+                        <div class="index-info-row">{{ addclient[-4].name }}</div>
+                        <div class="index-info-row">{{ addclient[-5].name }}</div>
+                    </div>
+                    <div class="index-info-column">
+                        <div class="index-info-row">Конктакт клиента</div>
+                        <div class="index-info-row">{{ addclient[-1].contact }}</div>
+                        <div class="index-info-row">{{ addclient[-2].contact }}а</div>
+                        <div class="index-info-row">{{ addclient[-3].contact }}</div>
+                        <div class="index-info-row">{{ addclient[-4].contact }}</div>
+                        <div class="index-info-row">{{ addclient[-5].contact }}</div>
+                    </div>
+                </div>   
+        </div>
+        <div class="index-container">
+            <h4>Последние отчеты</h2>
+                <div class="index-info-container">
+                    <div class="index-info-column">
+                        <div class="index-info-row">Услуга</div>
+                        <div class="index-info-row">{{ reports[-1].service }}</div>
+                        <div class="index-info-row">{{ reports[-2].service }}а</div>
+                        <div class="index-info-row">{{ reports[-3].service }}</div>
+                        <div class="index-info-row">{{ reports[-4].service }}</div>
+                        <div class="index-info-row">{{ reports[-5].service }}</div>
+                    </div>
+                    <div class="index-info-column">
+                        <div class="index-info-row">Стоимость</div>
+                        <div class="index-info-row">{{ reports[-1].service_price }}</div>
+                        <div class="index-info-row">{{ reports[-2].service_price }}</div>
+                        <div class="index-info-row">{{ reports[-3].service_price }}</div>
+                        <div class="index-info-row">{{ reports[-4].service_price }}</div>
+                        <div class="index-info-row">{{ reports[-5].service_price }}</div>
+                    </div>   
+        </div>
+    </div>
+{% endblock %}
